@@ -7,7 +7,7 @@ namespace MascotaFeliz.App.Consola
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Estamos haciendo prueba!");
+            Console.WriteLine("Estamos haciendo prueba en Edna Rocio!");
         }
     }
 }
