@@ -18,30 +18,30 @@ namespace MascotaFeliz.App.Persistencia
         /// </summary>
         /// <param name="appContext"></param>//
         
-        public RepositorioMascotas(AppContext appContext)
+        public RepositorioMascota(AppContext appContext)
         {
             _appContext = appContext;
         }
 
-        public Mascotas AddMascotas(Mascotas mascotas)
+        public Mascota AddMascota(Mascota mascota)
         {
             var mascotaAdicionado = _appContext.Mascotas.Add(mascota);
             _appContext.SaveChanges();
             return mascotaAdicionado.Entity;
         }
 
-        public void Deletemascota(int idMascota)
+        public void DeleteMascota(int idMascota)
         {
-            var mascotaEncontrado = _appContext.Mascota.FirstOrDefault(d => d.Id == idMascota);
+            var mascotaEncontrado = _appContext.Mascotas.FirstOrDefault(d => d.Id == idMascota);
             if (mascotaEncontrado == null)
                 return;
             _appContext.Mascotas.Remove(mascotaEncontrado);
             _appContext.SaveChanges();
         }
 
-       public IEnumerable<Mascota> GetAllMascota()
+       public IEnumerable<Mascota> GetAllMascotas()
         {
-            return GetAllMascotaS_();
+            return GetAllMascotas_();
         }
 
         public IEnumerable<Mascota> GetMascotasPorFiltro(string filtro)
@@ -51,7 +51,7 @@ namespace MascotaFeliz.App.Persistencia
             {
                 if (!String.IsNullOrEmpty(filtro)) // Si el filtro tiene algun valor
                 {
-                    mascotas = mascotas.Where(s => s.Nombres.Contains(filtro));
+                    mascotas = mascotas.Where(s => s.Nombre.Contains(filtro));
                 }
             }
             return mascotas;
@@ -62,7 +62,7 @@ namespace MascotaFeliz.App.Persistencia
             return _appContext.Mascotas;
         }
 
-        public Mascota GetAllMascota(int idMascota)
+        public Mascota GetMascota(int idMascota)
         {
             return _appContext.Mascotas.FirstOrDefault(d => d.Id == idMascota);
         }

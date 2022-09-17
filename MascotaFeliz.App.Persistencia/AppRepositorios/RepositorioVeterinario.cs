@@ -39,14 +39,14 @@ namespace MascotaFeliz.App.Persistencia
             _appContext.SaveChanges();
         }
 
-       public IEnumerable<Veterinario> GetAllVeterinarios()
+       public IEnumerable<Veterinario> GetAllVeterinario()
         {
-            return GetAllVeterinarios_();
+            return GetAllVeterinario_();
         }
 
         public IEnumerable<Veterinario> GetVeterinariosPorFiltro(string filtro)
         {
-            var veterinarios = GetAllVeterinarios(); // Obtiene todos los veterinario
+            var veterinarios = GetAllVeterinario(); // Obtiene todos los veterinario
             if (veterinarios != null)  //Si se tienen veterinario
             {
                 if (!String.IsNullOrEmpty(filtro)) // Si el filtro tiene algun valor
@@ -57,7 +57,7 @@ namespace MascotaFeliz.App.Persistencia
             return veterinarios;
         }
 
-        public IEnumerable<Veterinario> GetAllVeterinarios_()
+        public IEnumerable<Veterinario> GetAllVeterinario_()
         {
             return _appContext.Veterinarios;
         }
