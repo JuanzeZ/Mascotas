@@ -81,7 +81,7 @@ namespace MascotaFeliz.App.Consola
 
         private static void listarMascotas()
         {
-            Console.WriteLine("          LISTADO DE MASCOTAS  JOVENES ");
+            Console.WriteLine("          LISTADO DE MASCOTAS  JOVENES muy valientes ");
             Console.WriteLine("           ");
             Console.WriteLine("Nombre " + "  Raza    " + "     Especie " + "Color");
             Console.WriteLine("================================================");
