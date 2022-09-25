@@ -1,0 +1,72 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+	background-image: url("https://static.vecteezy.com/system/resources/thumbnails/007/500/701/small/set-mega-collection-bundle-cute-puppy-puppies-dog-pet-cartoon-doddle-funny-happy-face-for-kids-and-children-illustration-vector.jpg");
+}
+
+.form-register {
+	width: 400px;
+	background: #24303c;
+	padding: 50px;
+
+	margin: auto;
+	margin-top: 100px;
+	margin border-radius: 4px;
+	font-family: "calibri";
+	color: white;
+	box-shadow: 7 px 14px 34px #001;
+}
+
+.form-register h4 {
+	font-size: 44 px;
+	margin-bottom: 20 px;
+}
+
+.inputs {
+	width: 100%;
+	background: #24303c;
+	padding: 10 px;
+	border-radius: 5px;
+	margin-bottom: 16px;
+	border: 1 px solid #1f53c5;
+	font-family: "calibri";
+	font-size: 18px;
+	color: white;
+}
+
+.form-register p {
+	padding: ;
+	height: 50px;
+	text-align: center;
+	font-size: 18px;
+}
+
+.form-register a:hover {
+	color: white;
+	text-decoration: udnerline;
+
+}
+
+.form-register a {
+	padding: 5px;
+	height: 40px;
+	text-align: center;
+	font-size: 18px;
+
+}
+
+.form-register .boton {
+	width: 100%;
+	background: #1f53c5;
+	border: none;
+	padding: 12px;
+	color: white;
+	margin-left: 16px 0;
+	font-size: 16px;
+
+}
