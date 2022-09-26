@@ -13,20 +13,18 @@ namespace MascotaFeliz.App.Frontend.Pages
     {
         private readonly IRepositorioVisitasPyP _repoVisitasPyP;
 
-        public VisitaPyP visitasPyP { get; set; }
+        public Veterinario veterinario { get; set; }
 
-        public DetallesVisitasPyPModel()
+        public DetallesVeterinarioModel()
         {
-            this._repoVisitasPyP =
-                new RepositorioVisitasPyP(new Persistencia.AppContext());
+            this._repoVeterinario =
+                new RepositorioVeterinario(new Persistencia.AppContext());
         }
 
-        
-
-        public IActionResult OnGet(int visitasPyPId)
+        public IActionResult OnGet(int veterinarioId)
         {
-            visitasPyP = _repoVisitasPyP.GetVisitasPyP(visitasPyPId);
-            if (visitasPyP == null)
+            veterinario = _repoVeterinario.GetVeterinario(veterinarioId);
+            if (veterinario == null)
             {
                 return RedirectToPage("./NotFound");
             }

@@ -63,6 +63,24 @@ namespace MascotaFeliz.App.Persistencia
                 _appContext.SaveChanges();
             }
             return visitasPyPEncontrado;
-        }     
+        }    
+
+        public IEnumerable<VisitaPyP> GetVisitasPyPPorFiltro(string filtro)
+        {
+            var visitasPyP = GetAllVisitasPyP_(); // Obtiene todos los veterinario
+            if (visitasPyP != null)  //Si se tienen veterinario
+            {
+                if (!String.IsNullOrEmpty(filtro)) // Si el filtro tiene algun valor
+                {
+                    visitasPyP = visitasPyP.Where(s => s.CedulaVeterinario.Contains(filtro));
+                }
+            }
+            return visitasPyP;
+        } 
+
+        public IEnumerable<VisitaPyP> GetAllVisitasPyP_()
+        {
+            return _appContext.VisitasPyP;
+        }
     }
 }

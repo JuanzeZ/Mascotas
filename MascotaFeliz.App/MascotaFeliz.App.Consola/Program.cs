@@ -22,6 +22,10 @@ namespace MascotaFeliz.App.Consola
             _repoHistoria =
                 new RepositorioHistoria(new Persistencia.AppContext());
 
+        private static IRepositorioVisitaPyP
+            _repoVisitaPyP =
+                new RepositorioVisitaPyP(new Persistencia.AppContext());        
+
         static void Main(string[] args)
         {
             Console.WriteLine("Estamos haciendo prueba !");
